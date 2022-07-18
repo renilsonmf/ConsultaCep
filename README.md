@@ -6,3 +6,4 @@
 <h1 align="left"> Foi utilizado </h1>
 
 <p align="left"> Arquitetura MVVM-C </p>
+<p align="left"> Layout construido 100% ViewCode </p>
