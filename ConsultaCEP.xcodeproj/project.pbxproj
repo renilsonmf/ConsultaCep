@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526439AD28831C0A000136CB /* CepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526439AC28831C0A000136CB /* CepModel.swift */; };
+		526439AF28832860000136CB /* ResultCepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526439AE28832860000136CB /* ResultCepView.swift */; };
 		52DC8CFD2883012C00203E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8CFC2883012C00203E23 /* AppDelegate.swift */; };
 		52DC8CFF2883012C00203E23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8CFE2883012C00203E23 /* SceneDelegate.swift */; };
-		52DC8D012883012C00203E23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D002883012C00203E23 /* ViewController.swift */; };
-		52DC8D042883012C00203E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC8D022883012C00203E23 /* Main.storyboard */; };
+		52DC8D012883012C00203E23 /* ConsultCepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D002883012C00203E23 /* ConsultCepViewController.swift */; };
 		52DC8D062883012E00203E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DC8D052883012E00203E23 /* Assets.xcassets */; };
 		52DC8D092883012E00203E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC8D072883012E00203E23 /* LaunchScreen.storyboard */; };
 		52DC8D142883012E00203E23 /* ConsultaCEPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D132883012E00203E23 /* ConsultaCEPTests.swift */; };
 		52DC8D1E2883012E00203E23 /* ConsultaCEPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D1D2883012E00203E23 /* ConsultaCEPUITests.swift */; };
 		52DC8D202883012F00203E23 /* ConsultaCEPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D1F2883012F00203E23 /* ConsultaCEPUITestsLaunchTests.swift */; };
+		52DC8D2D2883019700203E23 /* ConsultCepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D2C2883019700203E23 /* ConsultCepView.swift */; };
+		52DC8D2F288302C900203E23 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D2E288302C900203E23 /* Coordinator.swift */; };
+		52DC8D31288302FD00203E23 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8D30288302FD00203E23 /* StartCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526439AC28831C0A000136CB /* CepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CepModel.swift; sourceTree = "<group>"; };
+		526439AE28832860000136CB /* ResultCepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCepView.swift; sourceTree = "<group>"; };
 		52DC8CF92883012C00203E23 /* ConsultaCEP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsultaCEP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DC8CFC2883012C00203E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DC8CFE2883012C00203E23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52DC8D002883012C00203E23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52DC8D032883012C00203E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52DC8D002883012C00203E23 /* ConsultCepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultCepViewController.swift; sourceTree = "<group>"; };
 		52DC8D052883012E00203E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DC8D082883012E00203E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DC8D0A2883012E00203E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		52DC8D192883012E00203E23 /* ConsultaCEPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsultaCEPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DC8D1D2883012E00203E23 /* ConsultaCEPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaCEPUITests.swift; sourceTree = "<group>"; };
 		52DC8D1F2883012F00203E23 /* ConsultaCEPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaCEPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52DC8D2C2883019700203E23 /* ConsultCepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultCepView.swift; sourceTree = "<group>"; };
+		52DC8D2E288302C900203E23 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		52DC8D30288302FD00203E23 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526439AA28831190000136CB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				526439B5288379C4000136CB /* Model */,
+				526439B4288379BE000136CB /* View */,
+				526439B3288379AD000136CB /* ViewModel */,
+				526439B22883799D000136CB /* Coordinator */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		526439AB28831197000136CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52DC8CFC2883012C00203E23 /* AppDelegate.swift */,
+				52DC8CFE2883012C00203E23 /* SceneDelegate.swift */,
+				52DC8D052883012E00203E23 /* Assets.xcassets */,
+				52DC8D072883012E00203E23 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		526439B22883799D000136CB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				52DC8D30288302FD00203E23 /* StartCoordinator.swift */,
+				52DC8D2E288302C900203E23 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		526439B3288379AD000136CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		526439B4288379BE000136CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526439AE28832860000136CB /* ResultCepView.swift */,
+				52DC8D002883012C00203E23 /* ConsultCepViewController.swift */,
+				52DC8D2C2883019700203E23 /* ConsultCepView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526439B5288379C4000136CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				526439AC28831C0A000136CB /* CepModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52DC8CF02883012C00203E23 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +163,9 @@
 		52DC8CFB2883012C00203E23 /* ConsultaCEP */ = {
 			isa = PBXGroup;
 			children = (
-				52DC8CFC2883012C00203E23 /* AppDelegate.swift */,
-				52DC8CFE2883012C00203E23 /* SceneDelegate.swift */,
-				52DC8D002883012C00203E23 /* ViewController.swift */,
-				52DC8D022883012C00203E23 /* Main.storyboard */,
-				52DC8D052883012E00203E23 /* Assets.xcassets */,
-				52DC8D072883012E00203E23 /* LaunchScreen.storyboard */,
 				52DC8D0A2883012E00203E23 /* Info.plist */,
+				526439AB28831197000136CB /* Resources */,
+				526439AA28831190000136CB /* Sources */,
 			);
 			path = ConsultaCEP;
 			sourceTree = "<group>";
@@ -233,7 +293,6 @@
 			files = (
 				52DC8D092883012E00203E23 /* LaunchScreen.storyboard in Resources */,
 				52DC8D062883012E00203E23 /* Assets.xcassets in Resources */,
-				52DC8D042883012C00203E23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DC8D012883012C00203E23 /* ViewController.swift in Sources */,
+				526439AF28832860000136CB /* ResultCepView.swift in Sources */,
+				526439AD28831C0A000136CB /* CepModel.swift in Sources */,
+				52DC8D2D2883019700203E23 /* ConsultCepView.swift in Sources */,
+				52DC8D31288302FD00203E23 /* StartCoordinator.swift in Sources */,
+				52DC8D012883012C00203E23 /* ConsultCepViewController.swift in Sources */,
+				52DC8D2F288302C900203E23 /* Coordinator.swift in Sources */,
 				52DC8CFD2883012C00203E23 /* AppDelegate.swift in Sources */,
 				52DC8CFF2883012C00203E23 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52DC8D022883012C00203E23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52DC8D032883012C00203E23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52DC8D072883012E00203E23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +498,6 @@
 				INFOPLIST_FILE = ConsultaCEP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +525,6 @@
 				INFOPLIST_FILE = ConsultaCEP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

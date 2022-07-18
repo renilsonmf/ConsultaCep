@@ -28,9 +28,9 @@ class ConsultCepView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Consulte Aqui"
-        label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 40)
+        label.text = "Busque seu CEP"
+        label.textColor = .yellow
+        label.font = .boldSystemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -52,10 +52,16 @@ class ConsultCepView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
-        button.backgroundColor = .systemBlue
-        button.setTitle("buscar", for: .normal)
+        button.backgroundColor = .systemPink
+        button.setTitle("procurar", for: .normal)
         button.addTarget(self, action: #selector(didTapButtonSearch), for: .touchUpInside)
         return button
+    }()
+    
+    lazy var resultCepView: ResultCepView = {
+        let view = ResultCepView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     @objc func didTapButtonSearch() {
@@ -66,6 +72,7 @@ class ConsultCepView: UIView {
         addSubview(titleLabel)
         addSubview(cepTextField)
         addSubview(searchButton)
+        addSubview(resultCepView)
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 120),
@@ -80,6 +87,10 @@ class ConsultCepView: UIView {
             searchButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 68),
             searchButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -68),
             searchButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            resultCepView.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: 40),
+            resultCepView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            resultCepView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
     

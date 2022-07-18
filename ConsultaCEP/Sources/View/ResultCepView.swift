@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 class ResultCepView: UIView {
-        
+            
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        backgroundColor = .clear
         setupView()
     }
     
@@ -25,7 +24,7 @@ class ResultCepView: UIView {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.distribution = .fillEqually
         stack.axis = .vertical
-        stack.backgroundColor = .darkGray
+        stack.backgroundColor = .white
         stack.layer.cornerRadius = 10
         stack.spacing = 10
         stack.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -35,48 +34,51 @@ class ResultCepView: UIView {
     
     lazy var streetLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rua"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var districtLabel: UILabel = {
         let label = UILabel()
-        label.text = "Bairro"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Cidade"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var stateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Estado"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var dddLabel: UILabel = {
         let label = UILabel()
-        label.text = "ddd"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    func setupValues(cep: CepModel) {
+        streetLabel.text = cep.logradouro
+        districtLabel.text = cep.bairro
+        cityLabel.text = cep.localidade
+        stateLabel.text = cep.uf
+        dddLabel.text = cep.ddd
+    }
     
     func setupView() {
         addSubview(stackView)

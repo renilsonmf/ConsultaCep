@@ -42,8 +42,11 @@ class ConsultCepViewController: UIViewController {
 extension ConsultCepViewController: TapButtonsProtocol {
     func didTapSearch(cep: String) {
         makeRequest(cep: cep) { cep in
-            print(cep)
+            DispatchQueue.main.async {
+                self.contentView.resultCepView.setupValues(cep: cep)
+            }
         }
+        
     }
 }
 
