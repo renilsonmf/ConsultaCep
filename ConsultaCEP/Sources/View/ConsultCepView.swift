@@ -53,7 +53,7 @@ class ConsultCepView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
         button.backgroundColor = .systemPink
-        button.setTitle("procurar", for: .normal)
+        button.setTitle("Buscar", for: .normal)
         button.addTarget(self, action: #selector(didTapButtonSearch), for: .touchUpInside)
         return button
     }()

@@ -20,7 +20,7 @@ class ConsultCepViewModel: ConsultCepProtocol {
             do {
                 let questions = try JSONDecoder().decode(CepModel.self, from: responseData)
                 completion(questions, false)
-            } catch let questions {
+            } catch {
                 completion(CepModel(), true)
             }
         }
