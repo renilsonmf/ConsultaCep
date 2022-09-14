@@ -61,7 +61,19 @@ class ConsultCepView: UIView {
     lazy var resultCepView: ResultCepView = {
         let view = ResultCepView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
         return view
+    }()
+    
+    lazy var errorCepLabel: UILabel = {
+        let label = UILabel()
+        label.text = "CEP Invalido"
+        label.font = .boldSystemFont(ofSize: 18)
+        label.textAlignment = .center
+        label.textColor = .white
+        label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     @objc func didTapButtonSearch() {
@@ -73,6 +85,7 @@ class ConsultCepView: UIView {
         addSubview(cepTextField)
         addSubview(searchButton)
         addSubview(resultCepView)
+        addSubview(errorCepLabel)
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 120),
@@ -90,7 +103,11 @@ class ConsultCepView: UIView {
             
             resultCepView.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: 40),
             resultCepView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            resultCepView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            resultCepView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            errorCepLabel.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: 40),
+            errorCepLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            errorCepLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
     
