@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import Foundation
 
 class ConsultCepViewController: UIViewController {
 
-    let contentView = ConsultCepView()
+    private let contentView = ConsultCepView()
+    private var viewModel: ConsultCepProtocol
+    
+    init(viewModel: ConsultCepProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,36 +31,18 @@ class ConsultCepViewController: UIViewController {
         super.loadView()
         view = contentView
     }
-    
-    func makeRequest(cep: String, completion: @escaping (CepModel, Bool) -> ()) {
-        let url = URL(string: "https://viacep.com.br/ws/\(cep)/json/")!
-        let task = URLSession.shared.dataTask(with: url) { data, response, erro in
-            guard let responseData = data else { return }
-            
-            do {
-                let questions = try JSONDecoder().decode(CepModel.self, from: responseData)
-                completion(questions, false)
-            } catch let questions {
-                completion(CepModel(), true)
-            }
-        }
-        task.resume()
-    }
 
 }
 
 extension ConsultCepViewController: TapButtonsProtocol {
     func didTapSearch(cep: String) {
-        makeRequest(cep: cep) { [ weak self ] result, error in
-            DispatchQueue.main.async {
+        viewModel.fetchCep(cep: cep) { [ weak self ] result, error in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 guard let self = self else { return }
                 if error != true {
-                    self.contentView.resultCepView.isHidden = false
-                    self.contentView.errorCepLabel.isHidden = true
-                    self.contentView.resultCepView.setupValues(cep: result)
+                    self.contentView.requestCepSuccess(false, result)
                 } else {
-                    self.contentView.resultCepView.isHidden = true
-                    self.contentView.errorCepLabel.isHidden = false
+                    self.contentView.requestCepSuccess(true, result)
                 }
             }
         }

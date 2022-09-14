@@ -8,15 +8,27 @@
 import Foundation
 
 struct CepModel: Codable {
-        
-    var cep: String = ""
-    var logradouro: String = ""
-    var complemento: String = ""
-    var bairro: String = ""
-    var localidade: String = ""
-    var uf: String = ""
-    var ibge: String = ""
-    var gia: String = ""
-    var ddd: String = ""
-    var siafi: String = ""
+    let cep: String
+    let logradouro: String
+    let complemento: String
+    let bairro: String
+    let localidade: String
+    let uf: String
+    let ibge: String
+    let gia: String
+    let ddd: String
+    let siafi: String
+    
+    init() {
+        cep = ""
+        logradouro = ""
+        complemento = ""
+        bairro = ""
+        localidade = ""
+        uf = ""
+        ibge = ""
+        gia = ""
+        ddd = ""
+        siafi = ""
+    }
 }

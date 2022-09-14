@@ -16,7 +16,8 @@ class StartCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = ConsultCepViewController()
+        let viewModel = ConsultCepViewModel()
+        let controller = ConsultCepViewController(viewModel: viewModel)
         navigationController.pushViewController(controller, animated: true)
     }
     

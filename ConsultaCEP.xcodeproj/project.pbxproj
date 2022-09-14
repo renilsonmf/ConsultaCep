@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5208F70F28D26C8300246A93 /* ConsultCepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208F70E28D26C8300246A93 /* ConsultCepViewModel.swift */; };
 		526439AD28831C0A000136CB /* CepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526439AC28831C0A000136CB /* CepModel.swift */; };
 		526439AF28832860000136CB /* ResultCepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526439AE28832860000136CB /* ResultCepView.swift */; };
 		52DC8CFD2883012C00203E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC8CFC2883012C00203E23 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5208F70E28D26C8300246A93 /* ConsultCepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultCepViewModel.swift; sourceTree = "<group>"; };
 		526439AC28831C0A000136CB /* CepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CepModel.swift; sourceTree = "<group>"; };
 		526439AE28832860000136CB /* ResultCepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCepView.swift; sourceTree = "<group>"; };
 		52DC8CF92883012C00203E23 /* ConsultaCEP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsultaCEP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		526439B3288379AD000136CB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5208F70E28D26C8300246A93 /* ConsultCepViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				526439AF28832860000136CB /* ResultCepView.swift in Sources */,
 				526439AD28831C0A000136CB /* CepModel.swift in Sources */,
+				5208F70F28D26C8300246A93 /* ConsultCepViewModel.swift in Sources */,
 				52DC8D2D2883019700203E23 /* ConsultCepView.swift in Sources */,
 				52DC8D31288302FD00203E23 /* StartCoordinator.swift in Sources */,
 				52DC8D012883012C00203E23 /* ConsultCepViewController.swift in Sources */,

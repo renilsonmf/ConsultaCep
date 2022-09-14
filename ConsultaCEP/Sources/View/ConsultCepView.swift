@@ -78,6 +78,20 @@ class ConsultCepView: UIView {
     
     @objc func didTapButtonSearch() {
         delegate?.didTapSearch(cep: cepTextField.text ?? "")
+        searchButton.loadingIndicator(show: true)
+    }
+    
+    func requestCepSuccess(_ result: Bool, _ cep: CepModel) {
+        if result {
+            searchButton.loadingIndicator(show: false)
+            resultCepView.isHidden = true
+            errorCepLabel.isHidden = false
+        } else {
+            searchButton.loadingIndicator(show: false)
+            resultCepView.isHidden = false
+            errorCepLabel.isHidden = true
+            resultCepView.setupValues(cep: cep)
+        }
     }
     
     func setupView() {
@@ -128,4 +142,27 @@ extension UITextField {
         self.layer.shadowRadius = 0.0
     }
     
+}
+
+extension UIButton {
+    func loadingIndicator(show: Bool) {
+        if show {
+            let indicator = UIActivityIndicatorView()
+            let buttonHeight = self.bounds.size.height
+            let buttonWidth = self.bounds.size.width
+            indicator.center = CGPoint(x: buttonWidth/2, y: buttonHeight/2)
+            indicator.color = .white
+            self.titleLabel?.layer.opacity = 0.0
+            self.addSubview(indicator)
+            indicator.startAnimating()
+        } else {
+            for view in self.subviews {
+                if let indicator = view as? UIActivityIndicatorView {
+                    indicator.stopAnimating()
+                    indicator.removeFromSuperview()
+                    self.titleLabel?.layer.opacity = 1
+                }
+            }
+        }
+    }
 }
